@@ -1,4 +1,3 @@
-// ----- Mode toggle logic -----
 const singleModeBtn = document.getElementById("singleModeBtn");
 const battleModeBtn = document.getElementById("battleModeBtn");
 const singleSearchSection = document.getElementById("singleSearch");
