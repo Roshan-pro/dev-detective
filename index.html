@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dev-Detective — Case File Lookup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="board">
+
+    <header class="case-header">
+      <div class="badge-number">CASE №&nbsp;0392</div>
+      <h1>Dev-Detective</h1>
+      <p class="subtitle">GitHub Investigation Unit — subject lookup &amp; comparison</p>
+    </header>
+
+    <main class="container">
+
+      <!-- Folder tabs -->
+      <div class="folder-tabs">
+        <button id="singleModeBtn" class="tab active">
+          <span class="tab-label">Subject File</span>
+        </button>
+        <button id="battleModeBtn" class="tab">
+          <span class="tab-label">Two-Subject Comparison</span>
+        </button>
+      </div>
+
+      <!-- Single search UI -->
+      <section id="singleSearch" class="search-section">
+        <form id="searchForm" class="search-form">
+          <div class="field">
+            <label for="usernameInput">Subject username</label>
+            <input type="text" id="usernameInput" placeholder="e.g. octocat" required>
+          </div>
+          <button type="submit" class="stamp-btn">Open File</button>
+        </form>
+
+        <div id="resultArea"></div>
+      </section>
+
+      <!-- Battle mode UI -->
+      <section id="battleSearch" class="search-section hidden">
+        <form id="battleForm" class="search-form battle-form">
+          <div class="field">
+            <label for="userOneInput">Subject A</label>
+            <input type="text" id="userOneInput" placeholder="Username 1" required>
+          </div>
+          <div class="field">
+            <label for="userTwoInput">Subject B</label>
+            <input type="text" id="userTwoInput" placeholder="Username 2" required>
+          </div>
+          <button type="submit" class="stamp-btn">Compare Files</button>
+        </form>
+
+        <div id="battleResultArea"></div>
+      </section>
+
+    </main>
+
+    <footer class="case-footer">
+      <p>Sprint 03 — Dev-Detective Data Integration · Filed under GitHub REST API v3</p>
+    </footer>
+
+  </div>
+
+  <script src="js/dateUtils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/domRenderer.js"></script>
+  <script src="js/battleMode.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
